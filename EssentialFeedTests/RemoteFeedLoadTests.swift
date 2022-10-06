@@ -48,6 +48,7 @@ final class RemoteFeedLoadTests: XCTestCase {
             }
         }
     }
+
     func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() {
         let (sut, client) = makeSUT()
         
@@ -55,6 +56,18 @@ final class RemoteFeedLoadTests: XCTestCase {
             let invalidJSON = Data("invalid json".utf8)
             client.complete(withStatusCode: 200, data: invalidJSON)
         }
+    }
+    
+    func test_load_deliversNoItemOn200HTTPResponseWithEmptyJSONList() {
+        let (sut, client) = makeSUT()
+        
+        var capturedResults: [RemoteFeedLoader.Result] = []
+        sut.load { capturedResults.append($0) }
+        
+        let emptyJSONList = Data("{\"items\": [] }".utf8)
+        client.complete(withStatusCode: 200, data: emptyJSONList)
+        
+        XCTAssertEqual(capturedResults, [.success([])])
     }
     
     // MARK: - Helpers
