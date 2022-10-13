@@ -1,3 +1,3 @@
 # Essential Feed
 
-![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+![example branch parameter](https://github.com/MateuSales/EssentialFeed/actions/workflows/CI.yml/badge.svg?branch=main)
