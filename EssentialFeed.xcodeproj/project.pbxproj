@@ -87,7 +87,6 @@
 		CE37D33828EFEF54002F68FB /* FeedAPI */ = {
 			isa = PBXGroup;
 			children = (
-				CEA415FC28F79317001705BC /* Helpers */,
 				CED148ED28E6A50800D37FB3 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				CE37D33928F0B85C002F68FB /* URLSessionHTTPClientTests.swift */,
 			);
@@ -161,6 +160,7 @@
 		CED148DC28E69F7600D37FB3 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				CEA415FC28F79317001705BC /* Helpers */,
 				CEA4163228FB703F001705BC /* FeedCache */,
 				CE37D33828EFEF54002F68FB /* FeedAPI */,
 			);
