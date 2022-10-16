@@ -73,14 +73,14 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         let item1 = makeItem(
             id: UUID(),
-            imageURL: URL(string: "http://a-url.com")!
+            url: URL(string: "http://a-url.com")!
         )
         
         let item2 = makeItem(
             id: UUID(),
             description: "a description",
             location: "a location",
-            imageURL: URL(string: "http://another-url.com")!
+            url: URL(string: "http://another-url.com")!
         )
 
         let items = [item1.model, item2.model]
@@ -146,14 +146,14 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
     
-    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
-        let feedItem = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
+    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, url: URL) -> (model: FeedImage, json: [String: Any]) {
+        let feedItem = FeedImage(id: id, description: description, location: location, url: url)
         
         let json = [
             "id": feedItem.id.uuidString,
             "description": feedItem.description,
             "location": feedItem.location,
-            "image": feedItem.imageURL.absoluteString
+            "image": feedItem.url.absoluteString
         ].reduce(into: [String: Any]()) { partialResult, tuple in
             if let value = tuple.value { partialResult[tuple.key] = value }
         }
