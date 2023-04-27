@@ -1,5 +1,3 @@
-
-
 public struct ResourceErrorViewModel {
 	public let message: String?
 	

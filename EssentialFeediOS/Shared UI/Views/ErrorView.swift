@@ -1,4 +1,3 @@
-
 import UIKit
 
 public final class ErrorView: UIButton {

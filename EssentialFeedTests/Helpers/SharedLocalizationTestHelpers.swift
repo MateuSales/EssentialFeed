@@ -1,7 +1,3 @@
-//	
-// Copyright © Essential Developer. All rights reserved.
-//
-
 import XCTest
 
 func assertLocalizedKeyAndValuesExist(in presentationBundle: Bundle, _ table: String, file: StaticString = #filePath, line: UInt = #line) {

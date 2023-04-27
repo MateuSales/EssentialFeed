@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 extension UIRefreshControl {
