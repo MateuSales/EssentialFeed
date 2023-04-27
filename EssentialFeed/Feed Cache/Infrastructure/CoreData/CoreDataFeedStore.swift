@@ -1,4 +1,3 @@
-
 import CoreData
 
 public final class CoreDataFeedStore {

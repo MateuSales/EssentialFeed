@@ -1,4 +1,3 @@
-
 import CoreData
 
 @objc(ManagedCache)

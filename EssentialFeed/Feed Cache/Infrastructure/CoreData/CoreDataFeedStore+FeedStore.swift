@@ -1,4 +1,3 @@
-
 import CoreData
 
 extension CoreDataFeedStore: FeedStore {
