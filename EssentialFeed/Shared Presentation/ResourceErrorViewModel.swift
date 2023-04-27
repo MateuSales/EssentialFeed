@@ -1,6 +1,4 @@
-//
-// Copyright © Essential Developer. All rights reserved.
-//
+
 
 public struct ResourceErrorViewModel {
 	public let message: String?
